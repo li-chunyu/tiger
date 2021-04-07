@@ -1,3 +1,19 @@
+// Tiger language 文法
+// stm -> stm; stm                     (Compound stm)
+// stm -> id := Exp                    (Assign stm)
+// stm -> print(ExpList)               (print stm)
+// 
+// Exp -> id                           (IdExp)
+// Exp -> num                          (NumExp)
+// Exp -> Exp Binop Exp                (OpExp)
+// Exp -> (Stm, Exp)                   (EseqExp)
+// 
+// ExpList -> Exp, ExpList             (PairExpList)
+// ExpList -> Exp                      (LastExpList)
+// Binop -> +                          (Plus)
+// Binop -> -
+// Binop -> x
+// Binop -> / 
 typedef struct A_stm_ *A_stm;
 typedef struct A_exp_ *A_exp;
 typedef struct A_expList_ *A_expList;
